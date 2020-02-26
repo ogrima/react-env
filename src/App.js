@@ -5,20 +5,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Oi {process.env.REACT_APP_NAME} </p>
+      <p>Version: {process.env.REACT_APP_Version} </p>
+      <p>OS: {process.env.REACT_APP_ENV} </p>
+
     </div>
   );
 }
