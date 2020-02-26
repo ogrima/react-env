@@ -6,9 +6,12 @@ ENV DIST=/usr/src/app
 
 ADD . ${DIST}/
 
-RUN rm -rf ${DIST}/src
-
 WORKDIR ${DIST}
+
+RUN npm install && \
+    npm run build && \
+    npm install -g serve && \
+    rm -rf ${DIST}/src
 
 EXPOSE 5000
 
